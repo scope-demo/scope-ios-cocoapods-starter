@@ -1,0 +1,22 @@
+name: Scope Testing
+
+on: [push]
+
+jobs:
+  scope:
+    runs-on: macOS-latest
+    
+    steps:
+      - name: Check if SCOPE_APIKEY is set
+        run: if [ "${{secrets.SCOPE_APIKEY}}" = "" ]; then exit 1; fi
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Switch XCode Version
+        run: sudo xcode-select -s /Applications/Xcode_11.app
+      - name: Build and test
+        run: |
+          pod update
+          xcodebuild test -workspace scope-ios-cocoapods-starter.xcworkspace -scheme scope-ios-cocoapods-starter -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0' 
+        env:
+          SCOPE_APIKEY: ${{secrets.SCOPE_APIKEY}}
+
