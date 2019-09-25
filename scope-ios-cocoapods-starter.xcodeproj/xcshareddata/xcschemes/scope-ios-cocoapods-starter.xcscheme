@@ -26,7 +26,53 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "NO">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "66CD42A9233A06F5003F68EC"
+            BuildableName = "scope-ios-cocoapods-starter.app"
+            BlueprintName = "scope-ios-cocoapods-starter"
+            ReferencedContainer = "container:scope-ios-cocoapods-starter.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "SCOPE_APIKEY"
+            value = "$(SCOPE_APIKEY)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_API_ENDPOINT"
+            value = "$(SCOPE_API_ENDPOINT)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_XCODE_APIKEY"
+            value = "$(SCOPE_XCODE_APIKEY)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_XCODE_API_ENDPOINT"
+            value = "$(SCOPE_XCODE_API_ENDPOINT)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_COMMIT_SHA"
+            value = "$(GITHUB_SHA)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_SOURCE_ROOT"
+            value = "$(GITHUB_WORKSPACE)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "GITHUB_REPOSITORY"
+            value = "$(GITHUB_REPOSITORY)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -70,43 +116,6 @@
             ReferencedContainer = "container:scope-ios-cocoapods-starter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "SCOPE_APIKEY"
-            value = "$(SCOPE_APIKEY)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SCOPE_API_ENDPOINT"
-            value = "$(SCOPE_API_ENDPOINT)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SCOPE_XCODE_APIKEY"
-            value = "$(SCOPE_XCODE_APIKEY)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SCOPE_XCODE_API_ENDPOINT"
-            value = "$(SCOPE_XCODE_API_ENDPOINT)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SCOPE_COMMIT_SHA"
-            value = "$(GITHUB_SHA)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SCOPE_SOURCE_ROOT"
-            value = "$(GITHUB_WORKSPACE)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "GITHUB_REPOSITORY"
-            value = "$(GITHUB_REPOSITORY)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
