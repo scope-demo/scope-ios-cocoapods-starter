@@ -6,30 +6,25 @@
 //
 
 /**
- * SCOPE
- *
- * Geolocation class has a method that calls a external service with HTTP.
- * ScopeAgent is imported here to integrate with the HTTP service with some custom code.
- * method getLocationWithAlamofire uses AlamofireTracing helper to automatically add Scope http headers instead of default Alamofire SessionManager
- * method getLocationWithURLSession uses SAURLSessionObserver class in Scope framework to append http headers to the Request
- */
+* SCOPE
+*
+* Geolocation class has two method method that calls a external service with HTTP.
+* The external service is also instrumented with Scope so its traces will appear in our test result
+* ScopeAgent is not imported here but request / responses will apear in Scope
+* The payload is not not currently instrumented, but you can check SCOPE_INSTRUMENTATION_HTTP_PAYLOADS
+* in test environment variables
+*/
 
 import Alamofire
 import CoreLocation
 import Foundation
-import ScopeAgent
 
 class Geolocation {
     class func getLocationWithAlamofire(identifier: String, completion: @escaping ((CLLocation?) -> Void)) {
         var url = URL(string: "http://flask-example-project.codescope.com:8000/car/")!
         url.appendPathComponent(identifier)
 
-        /**
-         * SCOPE
-         * Original code before intrumentation:
-         * SessionManager.request(url).responseJSON { response in
-         */
-        AlamofireTracing.session.request(url).responseJSON { response in
+        SessionManager.default.request(url).responseJSON { response in
             if let result = response.result.value,
                 let JSON = result as? NSDictionary,
                 let lat = JSON["lat"] as? Double,
@@ -45,15 +40,6 @@ class Geolocation {
     class func getLocationWithURLSession(identifier: String, completion: @escaping ((CLLocation?) -> Void)) {
         var url = URL(string: "http://flask-example-project.codescope.com:8000/car/")!
         url.appendPathComponent(identifier)
-
-        var request = URLRequest(url: url)
-
-        /**
-         * SCOPE
-         * Add following line to add HTTP instrumentation. It modifies request headers as expected by Scope.
-         */
-        request = SAURLSessionObserver.adapt(request)
-        /* SCOPE */
 
         let task = URLSession.shared.dataTask(with: url) { data, _, error in
             if let data = data,

@@ -66,7 +66,7 @@ class scope_ios_cocoapods_starterTests: XCTestCase {
     /**
      * SCOPE
      * This test shows integration of application using Scope with service using Scope, so we can correlate request with server executions.
-     * We are using Alamofire framework for networking. Check getLocationWithAlamofire in Geolocation.swift for example implementation
+     * We are using Alamofire framework for networking
      */
     func testServicesIntegrationWithAlamofire() {
         let expec = expectation(description: "testServicesIntegrationWithAlamofire")
@@ -86,7 +86,7 @@ class scope_ios_cocoapods_starterTests: XCTestCase {
     /**
      * SCOPE
      * This test shows integration of application using Scope with service using Scope, so we can correlate request with server executions.
-     * We are using URLSession framework for networking. Check getLocationWithURLSession in Geolocation.swift for example implementation
+     * We are using URLSession framework for networking
      */
     func testServicesIntegrationWithURLSession() {
         let expec = expectation(description: "testServicesIntegrationWithURLSession")
