@@ -16,7 +16,7 @@ jobs:
       - name: Build and test
         run: |
           pod update
-          xcodebuild test -workspace scope-ios-cocoapods-starter.xcworkspace -scheme scope-ios-cocoapods-starter -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0' 
+          xcodebuild test -workspace scope-ios-cocoapods-starter.xcworkspace -scheme scope-ios-cocoapods-starter -destination 'platform=iOS Simulator,name=iPhone 11' 
         env:
           SCOPE_APIKEY: ${{secrets.SCOPE_APIKEY}}
 

@@ -1,20 +1,20 @@
 PODS:
   - Alamofire (4.9.0)
-  - ScopeAgent (0.2.6)
+  - ScopeAgent (0.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9)
   - ScopeAgent
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - ScopeAgent
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
-  ScopeAgent: 1319ef7d07e90ea3592795511960d17d787c98c6
+  ScopeAgent: 6f4d3e782c89f1675e56b0bf5a761a9d0b77634a
 
 PODFILE CHECKSUM: 08d20c87c6442b7672ea066b04880929afa86b6d
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.3

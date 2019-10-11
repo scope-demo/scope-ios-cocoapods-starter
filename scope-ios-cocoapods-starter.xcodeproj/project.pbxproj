@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,8 +18,6 @@
 		66CD42C5233A06F5003F68EC /* scope_ios_cocoapods_starterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD42C4233A06F5003F68EC /* scope_ios_cocoapods_starterTests.swift */; };
 		66CD42D0233A06F5003F68EC /* scope_ios_cocoapods_starterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD42CF233A06F5003F68EC /* scope_ios_cocoapods_starterUITests.swift */; };
 		66CD42F3233A0AC2003F68EC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD42ED233A0AC2003F68EC /* Networking.swift */; };
-		66CD42F4233A0AC2003F68EC /* Geolocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD42EE233A0AC2003F68EC /* Geolocation.swift */; };
-		66CD42F6233A0BE7003F68EC /* AlamofireTracing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CD42F5233A0BE7003F68EC /* AlamofireTracing.swift */; };
 		94A12AC2B4BDD9991F2C4B76 /* Pods_scope_ios_cocoapods_starterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 212F6C9709F6046357CCF0AE /* Pods_scope_ios_cocoapods_starterUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,8 +59,6 @@
 		66CD42CF233A06F5003F68EC /* scope_ios_cocoapods_starterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scope_ios_cocoapods_starterUITests.swift; sourceTree = "<group>"; };
 		66CD42D1233A06F5003F68EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66CD42ED233A0AC2003F68EC /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		66CD42EE233A0AC2003F68EC /* Geolocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geolocation.swift; sourceTree = "<group>"; };
-		66CD42F5233A0BE7003F68EC /* AlamofireTracing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireTracing.swift; sourceTree = "<group>"; };
 		ACE325E688929C09CC1F8585 /* Pods-scope-ios-cocoapods-starterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scope-ios-cocoapods-starterTests.release.xcconfig"; path = "Target Support Files/Pods-scope-ios-cocoapods-starterTests/Pods-scope-ios-cocoapods-starterTests.release.xcconfig"; sourceTree = "<group>"; };
 		BB9D7B4ECCE95A464A79832C /* Pods-scope-ios-cocoapods-starterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scope-ios-cocoapods-starterUITests.release.xcconfig"; path = "Target Support Files/Pods-scope-ios-cocoapods-starterUITests/Pods-scope-ios-cocoapods-starterUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C47AC0CDEEB247810F484481 /* Pods-scope-ios-cocoapods-starterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scope-ios-cocoapods-starterUITests.debug.xcconfig"; path = "Target Support Files/Pods-scope-ios-cocoapods-starterUITests/Pods-scope-ios-cocoapods-starterUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,9 +141,7 @@
 		66CD42AC233A06F5003F68EC /* scope-ios-cocoapods-starter */ = {
 			isa = PBXGroup;
 			children = (
-				66CD42F5233A0BE7003F68EC /* AlamofireTracing.swift */,
 				66CD42ED233A0AC2003F68EC /* Networking.swift */,
-				66CD42EE233A0AC2003F68EC /* Geolocation.swift */,
 				66CD42AD233A06F5003F68EC /* AppDelegate.swift */,
 				66CD42AF233A06F5003F68EC /* SceneDelegate.swift */,
 				66CD42B1233A06F5003F68EC /* ViewController.swift */,
@@ -399,18 +393,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-scope-ios-cocoapods-starter/Pods-scope-ios-cocoapods-starter-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${PODS_ROOT}/ScopeAgent/ScopeAgent.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-scope-ios-cocoapods-starter/Pods-scope-ios-cocoapods-starter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScopeAgent.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-scope-ios-cocoapods-starter/Pods-scope-ios-cocoapods-starter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -428,8 +415,6 @@
 				66CD42F3233A0AC2003F68EC /* Networking.swift in Sources */,
 				66CD42AE233A06F5003F68EC /* AppDelegate.swift in Sources */,
 				66CD42B0233A06F5003F68EC /* SceneDelegate.swift in Sources */,
-				66CD42F4233A0AC2003F68EC /* Geolocation.swift in Sources */,
-				66CD42F6233A0BE7003F68EC /* AlamofireTracing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
