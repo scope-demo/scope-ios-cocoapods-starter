@@ -385,7 +385,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/ScopeAgent/ScopeAgent.framework/upload_symbols\n";
+			shellScript = "${PODS_ROOT}/ScopeAgent/ios/ScopeAgent.framework/upload_symbols\n";
 		};
 		8B687A4C15F650B1D44A03DC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

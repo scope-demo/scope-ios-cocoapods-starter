@@ -7,8 +7,8 @@ jobs:
     runs-on: macOS-latest
     
     steps:
-      - name: Check if SCOPE_APIKEY is set
-        run: if [ "${{secrets.SCOPE_APIKEY}}" = "" ]; then exit 1; fi
+      - name: Check if SCOPE_DSN is set
+        run: if [ "${{secrets.SCOPE_DSN}}" = "" ]; then exit 1; fi
       - name: Checkout
         uses: actions/checkout@v1
       - name: Switch XCode Version
@@ -18,5 +18,5 @@ jobs:
           pod update
           xcodebuild test -workspace scope-ios-cocoapods-starter.xcworkspace -scheme scope-ios-cocoapods-starter -destination 'platform=iOS Simulator,name=iPhone 11' 
         env:
-          SCOPE_APIKEY: ${{secrets.SCOPE_APIKEY}}
+          SCOPE_DSN: ${{secrets.SCOPE_DSN}}
 
